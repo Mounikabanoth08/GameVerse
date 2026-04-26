@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>GameVerse</title>
+</head>
+<body>
+    <div class="dashboard-wrap">
+        <h2>TECHNICAL SECTOR</h2>
+        <div class="grid" id="tech-grid"></div>
+        <h2 style="margin-top: 50px;">NON-TECHNICAL SECTOR</h2>
+        <div class="grid" id="fun-grid"></div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const tech = ["BugHunter", "CodeMaster", "LogicGate", "SQLQuest", "HexDash"];
+        const fun = ["MathNinja", "RiddleMe", "EmojiSpy", "MindMaze", "BrainTest"];
+        const tg = document.getElementById('tech-grid');
+        const fg = document.getElementById('fun-grid');
+
+        tech.forEach(g => tg.innerHTML += `<div class="game-card"><h3>${g}</h3><button class="auth-btn" style="padding: 10px;" onclick="location.href='/arena?game=${g}'">PLAY</button></div>`);
+        fun.forEach(g => fg.innerHTML += `<div class="game-card"><h3>${g}</h3><button class="auth-btn" style="padding: 10px;" onclick="location.href='/arena?game=${g}'">PLAY</button></div>`);
+    </script>
+</body>
+</html>
